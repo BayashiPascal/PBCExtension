@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2018.10.18)  26 JAN 2019 13:49
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2018.10.18)  26 JAN 2019 14:35
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -551,7 +551,7 @@ m/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr1
 /usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt8.pfb>
 
 pdfTeX warning: pdflatex: no GlyphToUnicode entry has been inserted yet!
-Output written on doc.pdf (3 pages, 55732 bytes).
+Output written on doc.pdf (3 pages, 55887 bytes).
 PDF statistics:
  31 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)

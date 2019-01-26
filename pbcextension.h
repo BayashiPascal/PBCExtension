@@ -11,7 +11,8 @@
 
 // ================= Define ==================
 
-// Return the number argument of a variadic function
-#define __VA_NB_ARGS__(...) (sizeof((int[]){__VA_ARGS__})/sizeof(int))
+// Return the number of arguments of a variadic function given
+// the type 'Type' of these arguments
+#define __VA_NB_ARGS__(Type, ...) (sizeof((Type[]){__VA_ARGS__})/sizeof(Type))
 
 #endif
