@@ -1,2 +1,2 @@
 # PBCExtension
-PBCExtension is a C library providing mcros to extend the C language.
+PBCExtension is a C library providing macros to extend the C language.
