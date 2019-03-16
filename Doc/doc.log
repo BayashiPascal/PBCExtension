@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2018.10.18)  26 JAN 2019 14:35
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2018.10.18)  16 MAR 2019 15:32
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -533,14 +533,15 @@ Overfull \hbox (188.0083pt too wide) in paragraph at lines 29--29
 )_INC_DIR)" | tr ' ' '\n' | sort -u` -c $($(repo)_DIR)/$($(repo)_EXENAME).c[] 
  []
 
-File: /home/bayashi/GitHub/PBCExtension/main.c  (verbatim)
 [2]
+File: /home/bayashi/GitHub/PBCExtension/main.c  (verbatim)
+ [3]
 File: /home/bayashi/GitHub/PBCExtension/unitTestRef.txt  (verbatim)
-) [3] (./doc.aux) ) 
+) [4] (./doc.aux) ) 
 Here is how much of TeX's memory you used:
  13268 strings out of 494314
  255352 string characters out of 6163111
- 289773 words of memory out of 5000000
+ 290773 words of memory out of 5000000
  16361 multiletter control sequences out of 15000+600000
  12571 words of font info for 49 fonts, out of 8000000 for 9000
  372 hyphenation exceptions out of 8191
@@ -551,9 +552,9 @@ m/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr1
 /usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt8.pfb>
 
 pdfTeX warning: pdflatex: no GlyphToUnicode entry has been inserted yet!
-Output written on doc.pdf (3 pages, 55887 bytes).
+Output written on doc.pdf (4 pages, 58503 bytes).
 PDF statistics:
- 31 PDF objects out of 1000 (max. 8388607)
+ 34 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  13 words of extra memory for PDF output out of 10000 (max. 10000000)
 

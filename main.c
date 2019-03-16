@@ -1,6 +1,8 @@
+#include <string.h>
 #include <stdlib.h>
 #include <stdio.h>
 #include "pbcextension.h"
+#include <time.h>
 
 int _TestVANbArgsInt(int nbArg, ...) {
   return nbArg;
@@ -22,26 +24,49 @@ int _TestVANbArgsFloat(int nbArg, ...) {
 
 void UnitTestVANbArgs() {
   if (TestVANbArgsInt(1) != 1) {
-    printf("UnitTestVANbArgs OK\n");
+    printf("UnitTestVANbArgs NOK\n");
     exit(1);
   }
   if (TestVANbArgsStr("a", "b") != 2) {
-    printf("UnitTestVANbArgs OK\n");
+    printf("UnitTestVANbArgs NOK\n");
     exit(1);
   }
   if (TestVANbArgsFloat(1.0, 2.0, 3.0) != 3) {
-    printf("UnitTestVANbArgs OK\n");
+    printf("UnitTestVANbArgs NOK\n");
     exit(1);
   }
   printf("UnitTestVANbArgs OK\n");
 }
 
+void UnitTestSwap() {
+  long a, b;
+  long n = 10000;
+  clock_t start = clock();
+  for (long i = 0; i < n; ++i) {
+    for (long j = 0; j < n; ++j) {
+      a = i;
+      b = j;
+      swap(a, b);
+      if (memcmp(&a, &j, sizeof(a)) != 0 || 
+        memcmp(&b, &i, sizeof(b)) != 0) {
+        printf("UnitTestSwap NOK\n");
+        exit(1);
+      }
+    }
+  }
+  clock_t end = clock();
+  float delay = (float)(end - start) * 1000.0 / (float)CLOCKS_PER_SEC;
+  printf("UnitTestSwap OK, %fms\n", delay);
+}
+
 void UnitTestAll() {
   UnitTestVANbArgs();
+  UnitTestSwap();
 }
 
 int main(void) {
   UnitTestAll();
+
   return 0;
 }
 
