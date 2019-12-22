@@ -59,14 +59,30 @@ void UnitTestSwap() {
   printf("UnitTestSwap OK, %fms\n", delay);
 }
 
+void UnitTestSGRString() {
+  
+  char* hello = "Hello\nThis is a test that should appear blinking, underline, bold, in red on blue";
+  char* sgrHello = 
+    SGRString(
+      SGR_SlowBlink(
+      SGR_Underline(
+      SGR_Bold(
+      SGR_ColorFG(255, 00, 0, 
+      SGR_ColorBG(0, 0, 255, hello))))));
+  printf("%s\n", sgrHello);
+  free(sgrHello);
+
+  printf("UnitTestSGRString OK\n");
+}
+
 void UnitTestAll() {
   UnitTestVANbArgs();
   UnitTestSwap();
+  UnitTestSGRString();
 }
 
 int main(void) {
   UnitTestAll();
-
   return 0;
 }
 
