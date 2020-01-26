@@ -67,10 +67,17 @@ void UnitTestSGRString() {
       SGR_SlowBlink(
       SGR_Underline(
       SGR_Bold(
-      SGR_ColorFG(255, 00, 0, 
+      SGR_ColorFG(255, 0, 0, 
       SGR_ColorBG(0, 0, 255, hello))))));
   printf("%s\n", sgrHello);
   free(sgrHello);
+
+  int d = 123;
+  char* msg = 
+    SGRString(
+      SGR_ColorFG(255, 0, 0, "%d"));
+  printf(msg, d);
+  printf("\n");
 
   printf("UnitTestSGRString OK\n");
 }
@@ -82,7 +89,8 @@ void UnitTestAll() {
 }
 
 int main(void) {
-  UnitTestAll();
+  UnitTestSGRString();
+  //UnitTestAll();
   return 0;
 }
 
